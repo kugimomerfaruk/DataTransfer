@@ -7,9 +7,22 @@
 //
 
 import UIKit
+var todoArr = [String] ()
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var addButonOutlet: UIButton!
+    @IBOutlet weak var todoAddTextField: UITextField!
+    
+    
+    
+    @IBAction func todoAddBtn(_ sender: UIButton) {
+        print(todoAddTextField.text!)
+        todoArr.append("\(todoAddTextField.text!)\n")
+        print(todoArr)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
